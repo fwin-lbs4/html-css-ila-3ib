@@ -14,11 +14,12 @@ body {
 body {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
+  gap: 1rem;
   place-items: center;
 }
 
 body > * {
-  max-width: 65ch;
+  max-inline-size: 65ch;
 }
 
 .header img {
@@ -43,7 +44,37 @@ body > * {
   }
 }
 
-.main form fieldset {
+.main {
+  & form {
+    & fieldset {
+      display: grid;
+      gap: 0.5rem;
+
+      border-radius: 1rem;
+
+      & div {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0.5rem;
+      }
+    }
+
+    & input {
+      padding: 0.25em;
+      margin: 0;
+    }
+
+    & button {
+      &[type="submit"],
+      &[type="reset"] {
+        border: medium solid white;
+        border-radius: 1000vmax;
+      }
+  }
+  }
+}
+
+/* .main form fieldset {
   display: grid;
   gap: 0.5rem;
 }
@@ -67,4 +98,4 @@ body > * {
 .main form button[type="reset"] {
   border: medium solid white;
   border-radius: 1000vmax;
-}
+} */

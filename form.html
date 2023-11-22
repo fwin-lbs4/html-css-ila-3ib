@@ -28,7 +28,7 @@
           <fieldset>
             <legend>Konto</legend>
             <div>
-              <label for="salutation">Anrede</label>
+              <span>Anrede</span>
               <div>
                 <div>
                   <input
@@ -115,6 +115,7 @@
             <div>
               <label for="state">Bundesland</label>
               <select name="state" id="state" required>
+                <option placeholder>Bundesland</option>
                 <option value="salzburg">Salzburg</option>
                 <option value="vorarlberg">vorarlberg</option>
                 <option value="steiermark">steiermark</option>
@@ -133,7 +134,7 @@
                 name="phone"
                 id="phone"
                 placeholder="Telefonnummer"
-                pattern="+[0-9]{2}[0-9]{2-4}\w[0-9]{+?}"
+                pattern="\+[0-9]{2}\w[0-9]{2-4}\w[0-9]{+?}"
               />
             </div>
           </fieldset>
