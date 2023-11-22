@@ -1,0 +1,70 @@
+@import url("./reset.css");
+
+:root {
+  color-scheme: dark light;
+  accent-color: red;
+}
+
+html,
+body {
+  min-block-size: 100%;
+  block-size: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  place-items: center;
+}
+
+body > * {
+  max-width: 65ch;
+}
+
+.header img {
+  margin-inline: auto;
+}
+
+.nav,
+.footer {
+  & menu {
+    display: flex;
+    gap: 1rem;
+
+    list-style-type: none;
+    padding: 0;
+
+    & a {
+      display: block;
+      padding: 0.5em;
+      border: thin solid white;
+      border-radius: 1000vmax;
+    }
+  }
+}
+
+.main form fieldset {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.main form fieldset div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+}
+
+.main form fieldset {
+  border-radius: 1rem;
+}
+
+.main form input {
+  padding: 0.25em;
+  margin: 0;
+}
+
+.main form button[type="submit"],
+.main form button[type="reset"] {
+  border: medium solid white;
+  border-radius: 1000vmax;
+}
