@@ -1,3 +1,8 @@
+/**
+ * Name: style.css
+ * Author: Florian Windisch
+ * Description: ILA-KPT_ÜBUNG1
+ */
 @import url("./reset.css");
 
 :root {
@@ -62,6 +67,14 @@ body > * {
     & input {
       padding: 0.25em;
       margin: 0;
+
+      &:valid:not(:empty) {
+        border-color: green;
+      }
+
+      &:invalid:not(:empty) {
+        border-color: red;
+      }
     }
 
     & button {
@@ -70,32 +83,25 @@ body > * {
         border: medium solid white;
         border-radius: 1000vmax;
       }
+    }
   }
+}
+
+.dialog {
+  position: fixed;
+  inset: 0;
+
+  margin: auto;
+
+  & div {
+    display: grid;
+    gap: 1rem;
+
+    & button {
+      display: block;
+      margin: auto;
+      padding: 0.5em 1em;
+      border-radius: 1000vmax;
+    }
   }
 }
-
-/* .main form fieldset {
-  display: grid;
-  gap: 0.5rem;
-}
-
-.main form fieldset div {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 0.5rem;
-}
-
-.main form fieldset {
-  border-radius: 1rem;
-}
-
-.main form input {
-  padding: 0.25em;
-  margin: 0;
-}
-
-.main form button[type="submit"],
-.main form button[type="reset"] {
-  border: medium solid white;
-  border-radius: 1000vmax;
-} */

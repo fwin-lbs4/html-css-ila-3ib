@@ -3,8 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form</title>
+    <meta name="name" content="Anmeldeformular" />
+    <meta name="author" content="Florian Windisch" />
+    <meta name="description" content="ILA-KPT_ÜBUNG1" />
+    <title>Anmeldeformular</title>
     <link rel="stylesheet" href="./style.css" />
+    <script defer src="./form.js"></script>
   </head>
   <body>
     <header class="header">
@@ -17,14 +21,14 @@
           <a href="./index.html">Start</a>
         </li>
         <li>
-          <a href="./form.html">Formular</a>
+          <a href="./form.html">Anmeldeformular</a>
         </li>
       </menu>
     </nav>
     <main class="main">
       <article>
-        <h2>Registrierungsformular</h2>
-        <form method="POST" action="./form.html">
+        <h2>Anmeldeformular</h2>
+        <form method="POST" action="./form.html" id="form">
           <fieldset>
             <legend>Konto</legend>
             <div>
@@ -134,7 +138,7 @@
                 name="phone"
                 id="phone"
                 placeholder="Telefonnummer"
-                pattern="\+[0-9]{2}\w[0-9]{2-4}\w[0-9]{+?}"
+                pattern="(0|\+)([0-9]|\s|-){9,16}"
               />
             </div>
           </fieldset>
@@ -157,5 +161,11 @@
         </li>
       </menu>
     </footer>
+    <dialog class="dialog">
+      <div>
+        <pre></pre>
+        <button type="button">Schließen</button>
+      </div>
+    </dialog>
   </body>
 </html>
