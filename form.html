@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="name" content="Anmeldeformular" />
     <meta name="author" content="Florian Windisch" />
     <meta name="description" content="ILA-KPT_ÜBUNG1" />
+
     <title>Anmeldeformular</title>
+
+    <link rel="preload" href="./logo.svg" as="image" />
     <link rel="stylesheet" href="./style.css" />
     <script defer src="./form.js"></script>
   </head>
   <body>
     <header class="header">
-      <img src="./logo.svg" alt="Logo NCM" />
+      <img
+        decoding="async"
+        fetchpriority="high"
+        src="./logo.svg"
+        alt="Logo NCM"
+        width="300"
+        height="91"
+      />
       <h1>NCM.at - Hotel-First Digitalagentur</h1>
     </header>
+
     <nav class="nav">
       <menu>
         <li>
@@ -25,14 +36,18 @@
         </li>
       </menu>
     </nav>
+
     <main class="main">
       <article>
         <h2>Anmeldeformular</h2>
+
         <form method="POST" action="./form.html" id="form">
           <fieldset>
             <legend>Konto</legend>
+
             <div>
               <span>Anrede</span>
+
               <div>
                 <div>
                   <input
@@ -44,6 +59,7 @@
                   />
                   <label for="salutationMr">Herr</label>
                 </div>
+
                 <div>
                   <input
                     type="radio"
@@ -55,6 +71,7 @@
                 </div>
               </div>
             </div>
+
             <div>
               <label for="name">Name</label>
               <input
@@ -65,14 +82,17 @@
                 placeholder="Name"
               />
             </div>
+
             <div>
               <label for="date">Geburtstag</label>
               <input type="date" name="date" id="date" />
             </div>
+
             <div>
               <label for="mail">E-Mail</label>
               <input type="email" name="mail" id="mail" placeholder="E-Mail" />
             </div>
+
             <div>
               <label for="password">Passwort</label>
               <input
@@ -84,8 +104,10 @@
               />
             </div>
           </fieldset>
+
           <fieldset>
             <legend>Adresse</legend>
+
             <div>
               <label for="street">Straße</label>
               <input
@@ -95,6 +117,7 @@
                 placeholder="Straße"
               />
             </div>
+
             <div>
               <label for="city">Wohnort</label>
               <input
@@ -105,6 +128,7 @@
                 placeholder="Wohnort"
               />
             </div>
+
             <div>
               <label for="zip">PLZ</label>
               <input
@@ -116,6 +140,7 @@
                 max="9999"
               />
             </div>
+
             <div>
               <label for="state">Bundesland</label>
               <select name="state" id="state" required>
@@ -131,6 +156,7 @@
                 <option value="tirol">Tirol</option>
               </select>
             </div>
+
             <div>
               <label for="phone">Telefonnummer</label>
               <input
@@ -142,6 +168,7 @@
               />
             </div>
           </fieldset>
+
           <fieldset>
             <legend>Datei</legend>
             <div>
@@ -149,18 +176,21 @@
               <input type="file" name="file" id="file" />
             </div>
           </fieldset>
+
           <button type="submit">Submit</button>
           <button type="reset">Reset</button>
         </form>
       </article>
     </main>
+
     <footer class="footer">
       <menu>
         <li>
-          <a href="#">Sitemap</a>
+          <a href="./sitemap.xml">Sitemap</a>
         </li>
       </menu>
     </footer>
+
     <dialog class="dialog">
       <div>
         <pre></pre>

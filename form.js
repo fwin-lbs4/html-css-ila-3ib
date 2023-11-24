@@ -11,8 +11,11 @@ const dialogClose = document.querySelector(".dialog > div > button");
 /**
  * Take the formdata and display it in a dialog
  * @param {Event} e
+ * @returns {false} False to stop browsers from submitting the form.
  */
 const submitForm = (e) => {
+  e.preventDefault();
+
   const formData = new FormData(e.target, e.submitter);
 
   // reset the pre-tag
@@ -34,14 +37,12 @@ const submitForm = (e) => {
 
   // open the dialog
   dialog.showModal();
+
+  return false;
 };
 
 // listen to submit on the form, prevent default action and use custom submitHandler
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  submitForm(e);
-  return false;
-});
+form.addEventListener("submit", submitForm);
 
 // listen to click events on the close button and close the dialog on click
 dialogClose.addEventListener("click", () => {
