@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+   xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9 https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>https://fwin-pi.local/</loc>
+        <lastmod>2023-11-24</lastmod>
+    </url>
+    <url>
+        <loc>https://fwin-pi.local/form/</loc>
+        <lastmod>2023-11-24</lastmod>
+    </url>
+</urlset>

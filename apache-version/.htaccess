@@ -1,0 +1,12 @@
+RewriteEngine On
+# Redirects example.com/file.html to example.com/file
+RewriteCond %{REQUEST_FILENAME} !-d          # is not directory
+RewriteCond %{REQUEST_FILENAME}\.html -f     # is an existing html file
+RewriteCond %{REQUEST_URI} ^(.+)\.html$      # request URI ends with .html
+RewriteRule (.*)\.html$ /$1 [R=301,L]        # redirect from index.html to index
+
+# Redirects example.com/file.php to example.com/file
+RewriteCond %{REQUEST_FILENAME} !-d          # is not directory
+RewriteCond %{REQUEST_FILENAME}\.php -f     # is an existing php file
+RewriteCond %{REQUEST_URI} ^(.+)\.php$      # request URI ends with .php
+RewriteRule (.*)\.php$ /$1 [R=301,L]        # redirect from index.php to index

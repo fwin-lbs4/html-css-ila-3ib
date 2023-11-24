@@ -1,0 +1,107 @@
+/**
+ * Name: style.css
+ * Author: Florian Windisch
+ * Description: ILA-KPT_ÜBUNG1
+ */
+@import url("./reset.css");
+
+:root {
+  color-scheme: dark light;
+  accent-color: red;
+}
+
+html,
+body {
+  min-block-size: 100%;
+  block-size: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 1rem;
+  place-items: center;
+}
+
+body > * {
+  max-inline-size: 65ch;
+}
+
+.header img {
+  margin-inline: auto;
+}
+
+.nav,
+.footer {
+  & menu {
+    display: flex;
+    gap: 1rem;
+
+    list-style-type: none;
+    padding: 0;
+
+    & a {
+      display: block;
+      padding: 0.5em;
+      border: thin solid white;
+      border-radius: 1000vmax;
+    }
+  }
+}
+
+.main {
+  & form {
+    & fieldset {
+      display: grid;
+      gap: 0.5rem;
+
+      border-radius: 1rem;
+
+      & div {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 0.5rem;
+      }
+    }
+
+    & input {
+      padding: 0.25em;
+      margin: 0;
+
+      &:valid:not(:empty) {
+        border-color: green;
+      }
+
+      &:invalid:not(:empty) {
+        border-color: red;
+      }
+    }
+
+    & button {
+      &[type="submit"],
+      &[type="reset"] {
+        border: medium solid white;
+        border-radius: 1000vmax;
+      }
+    }
+  }
+}
+
+.dialog {
+  position: fixed;
+  inset: 0;
+
+  margin: auto;
+
+  & div {
+    display: grid;
+    gap: 1rem;
+
+    & button {
+      display: block;
+      margin: auto;
+      padding: 0.5em 1em;
+      border-radius: 1000vmax;
+    }
+  }
+}
